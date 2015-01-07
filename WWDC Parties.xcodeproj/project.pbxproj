@@ -16,6 +16,7 @@
 		0444683B1A5DD75100B22106 /* WWDC_PartiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */; };
 		044468451A5DE1EF00B22106 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468441A5DE1EF00B22106 /* APIHandler.swift */; };
 		044468471A5DE48A00B22106 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468461A5DE48A00B22106 /* APIRequest.swift */; };
+		044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468481A5DEF9000B22106 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_PartiesTests.swift; sourceTree = "<group>"; };
 		044468441A5DE1EF00B22106 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
 		044468461A5DE48A00B22106 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		044468481A5DEF9000B22106 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		0444681F1A5DD75100B22106 /* WWDC Parties */ = {
 			isa = PBXGroup;
 			children = (
+				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
 				044468221A5DD75100B22106 /* AppDelegate.swift */,
 				044468241A5DD75100B22106 /* MasterViewController.swift */,
 				044468261A5DD75100B22106 /* DetailViewController.swift */,
@@ -224,6 +227,7 @@
 				044468271A5DD75100B22106 /* DetailViewController.swift in Sources */,
 				044468251A5DD75100B22106 /* MasterViewController.swift in Sources */,
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
+				044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */,
 				044468471A5DE48A00B22106 /* APIRequest.swift in Sources */,
 				044468451A5DE1EF00B22106 /* APIHandler.swift in Sources */,
 			);

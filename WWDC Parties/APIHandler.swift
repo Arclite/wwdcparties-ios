@@ -3,8 +3,15 @@
 
 import UIKit
 
-struct Party {
+struct Party: Printable {
 	let name :String
+	var description: String {
+		return name
+	}
+	
+	init(_ partyJSON: JSON) {
+		name = partyJSON["name"].stringValue
+	}
 }
 
 typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
@@ -15,22 +22,22 @@ class APIHandler: NSObject {
 	class var sharedHandler: APIHandler {
 		return _SharedAPIHandler
 	}
-
-	func fetchParties(completionHandler: PartyListCompletionHandler) {
-		if let request = self.partiesRequest() {
-			let fetchTask = NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
-				println(data)
-			}
-			
-			fetchTask.resume()
-		}
-	}
 	
-	func partiesRequest() -> NSURLRequest? {
+	var partiesRequest: NSURLRequest? {
 		if let partiesURL = NSURL(string: "/parties", relativeToURL: APIRequest.baseURL()) {
 			return NSURLRequest(URL: partiesURL)
 		} else {
 			return nil
+		}
+	}
+
+	func fetchParties(completionHandler: PartyListCompletionHandler) {
+		if let request = partiesRequest {
+			NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
+				let partiesJSONArray = JSON(data: data).arrayValue
+				let parties = map(partiesJSONArray) { Party($0) }
+				completionHandler(parties, error)
+			}.resume()
 		}
 	}
 }
