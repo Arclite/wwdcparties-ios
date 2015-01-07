@@ -34,6 +34,13 @@ class MasterViewController: UITableViewController {
 		    self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
 		}
 	}
+	
+	override func viewDidAppear(animated: Bool) {
+		super.viewDidAppear(animated)
+		APIHandler.sharedHandler.fetchParties { (parties, error) in
+			println(parties)
+		}
+	}
 
 	override func didReceiveMemoryWarning() {
 		super.didReceiveMemoryWarning()
