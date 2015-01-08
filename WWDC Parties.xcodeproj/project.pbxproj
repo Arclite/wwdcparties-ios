@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		040ED13C1A5E06620014413E /* PartyListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040ED13B1A5E06620014413E /* PartyListDataSource.swift */; };
 		040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040ED13E1A5E09A80014413E /* PartyListCell.swift */; };
-		0441089E1A5E0F7600627EC3 /* PartyListSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0441089D1A5E0F7600627EC3 /* PartyListSectionHeaderView.swift */; };
 		044468231A5DD75100B22106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468221A5DD75100B22106 /* AppDelegate.swift */; };
 		044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468241A5DD75100B22106 /* PartyListViewController.swift */; };
 		044468271A5DD75100B22106 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468261A5DD75100B22106 /* DetailViewController.swift */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		040ED13B1A5E06620014413E /* PartyListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyListDataSource.swift; sourceTree = "<group>"; };
 		040ED13E1A5E09A80014413E /* PartyListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyListCell.swift; sourceTree = "<group>"; };
-		0441089D1A5E0F7600627EC3 /* PartyListSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyListSectionHeaderView.swift; sourceTree = "<group>"; };
 		0444681D1A5DD75100B22106 /* WWDC Parties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Parties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044468211A5DD75100B22106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044468221A5DD75100B22106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				044468241A5DD75100B22106 /* PartyListViewController.swift */,
 				040ED13B1A5E06620014413E /* PartyListDataSource.swift */,
 				040ED13E1A5E09A80014413E /* PartyListCell.swift */,
-				0441089D1A5E0F7600627EC3 /* PartyListSectionHeaderView.swift */,
 			);
 			name = "Party List";
 			sourceTree = "<group>";
@@ -238,7 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0441089E1A5E0F7600627EC3 /* PartyListSectionHeaderView.swift in Sources */,
 				044468271A5DD75100B22106 /* DetailViewController.swift in Sources */,
 				040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */,
 				044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */,

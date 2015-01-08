@@ -18,13 +18,7 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 		return partyCell
 	}
 	
-	func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView {
-		let sectionView = PartyListSectionHeaderView()
-		
-		return sectionView
-	}
-	
-	func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		return 83.0
+	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String {
+		return "Sunday, June 1st"
 	}
 }
