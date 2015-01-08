@@ -3,6 +3,8 @@
 
 import UIKit
 
+private let ShowPartyInfoSegueIdentifier = "ShowPartyInfo"
+
 class PartyListViewController: UITableViewController {
 	@IBOutlet var dataSource: PartyListDataSource!
 	var detailViewController: DetailViewController? = nil
@@ -34,7 +36,7 @@ class PartyListViewController: UITableViewController {
 	}
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "showDetail" {
+		if segue.identifier == ShowPartyInfoSegueIdentifier {
 		    if let indexPath = self.tableView.indexPathForSelectedRow() {
 		        let party = dataSource.parties[indexPath.row]
 		        let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController

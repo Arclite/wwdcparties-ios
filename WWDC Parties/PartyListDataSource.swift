@@ -3,6 +3,8 @@
 
 import UIKit
 
+private let PartyListCellIdentifier = "PartyListCell"
+
 class PartyListDataSource: NSObject, UITableViewDataSource {
 	var parties = [Party]()
 	
@@ -11,7 +13,7 @@ class PartyListDataSource: NSObject, UITableViewDataSource {
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as UITableViewCell
 		
 		let party = parties[indexPath.row]
 		cell.textLabel.text = party.name
