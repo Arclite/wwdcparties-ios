@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040ED13C1A5E06620014413E /* PartyListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040ED13B1A5E06620014413E /* PartyListDataSource.swift */; };
 		044468231A5DD75100B22106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468221A5DD75100B22106 /* AppDelegate.swift */; };
-		044468251A5DD75100B22106 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468241A5DD75100B22106 /* MasterViewController.swift */; };
+		044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468241A5DD75100B22106 /* PartyListViewController.swift */; };
 		044468271A5DD75100B22106 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468261A5DD75100B22106 /* DetailViewController.swift */; };
 		0444682A1A5DD75100B22106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044468281A5DD75100B22106 /* Main.storyboard */; };
 		0444682C1A5DD75100B22106 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444682B1A5DD75100B22106 /* Images.xcassets */; };
@@ -29,10 +30,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		040ED13B1A5E06620014413E /* PartyListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyListDataSource.swift; sourceTree = "<group>"; };
 		0444681D1A5DD75100B22106 /* WWDC Parties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Parties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044468211A5DD75100B22106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044468221A5DD75100B22106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		044468241A5DD75100B22106 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		044468241A5DD75100B22106 /* PartyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyListViewController.swift; sourceTree = "<group>"; };
 		044468261A5DD75100B22106 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		044468291A5DD75100B22106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0444682B1A5DD75100B22106 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -85,13 +87,14 @@
 			children = (
 				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
 				044468221A5DD75100B22106 /* AppDelegate.swift */,
-				044468241A5DD75100B22106 /* MasterViewController.swift */,
+				044468241A5DD75100B22106 /* PartyListViewController.swift */,
 				044468261A5DD75100B22106 /* DetailViewController.swift */,
 				044468281A5DD75100B22106 /* Main.storyboard */,
 				0444682B1A5DD75100B22106 /* Images.xcassets */,
 				0444682D1A5DD75100B22106 /* LaunchScreen.xib */,
 				044468201A5DD75100B22106 /* Supporting Files */,
 				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
+				040ED13B1A5E06620014413E /* PartyListDataSource.swift */,
 			);
 			path = "WWDC Parties";
 			sourceTree = "<group>";
@@ -222,10 +225,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				044468271A5DD75100B22106 /* DetailViewController.swift in Sources */,
-				044468251A5DD75100B22106 /* MasterViewController.swift in Sources */,
+				044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */,
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
 				044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */,
 				044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */,
+				040ED13C1A5E06620014413E /* PartyListDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
