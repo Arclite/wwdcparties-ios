@@ -7,7 +7,7 @@ private let ShowPartyInfoSegueIdentifier = "ShowPartyInfo"
 
 class PartyListViewController: UITableViewController {
 	@IBOutlet var dataSource: PartyListDataSource!
-	var detailViewController: DetailViewController? = nil
+	var partyInfoViewController: PartyInfoViewController?
 	let partyHandler = PartyHandler()
 
 	override func awakeFromNib() {
@@ -23,7 +23,7 @@ class PartyListViewController: UITableViewController {
 
 		if let split = self.splitViewController {
 		    let controllers = split.viewControllers
-		    self.detailViewController = controllers[controllers.count-1].topViewController as? DetailViewController
+		    partyInfoViewController = controllers[controllers.count-1].topViewController as? PartyInfoViewController
 		}
 	}
 	
@@ -38,8 +38,8 @@ class PartyListViewController: UITableViewController {
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == ShowPartyInfoSegueIdentifier {
 		    if let indexPath = tableView.indexPathForSelectedRow() {
-		        let party = dataSource.parties[indexPath.row]
-		        let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+		        let controller = (segue.destinationViewController as UINavigationController).topViewController as PartyInfoViewController
+				controller.party = dataSource.parties[indexPath.row]
 		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
 		        controller.navigationItem.leftItemsSupplementBackButton = true
 		    }
