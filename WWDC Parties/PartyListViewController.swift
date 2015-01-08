@@ -37,7 +37,7 @@ class PartyListViewController: UITableViewController {
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 		if segue.identifier == ShowPartyInfoSegueIdentifier {
-		    if let indexPath = self.tableView.indexPathForSelectedRow() {
+		    if let indexPath = tableView.indexPathForSelectedRow() {
 		        let party = dataSource.parties[indexPath.row]
 		        let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
 		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()

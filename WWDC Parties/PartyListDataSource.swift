@@ -13,10 +13,8 @@ class PartyListDataSource: NSObject, UITableViewDataSource {
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as UITableViewCell
-		
-		let party = parties[indexPath.row]
-		cell.textLabel.text = party.name
-		return cell
+		let partyCell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as PartyListCell
+		partyCell.party = parties[indexPath.row]
+		return partyCell
 	}
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		040ED13C1A5E06620014413E /* PartyListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040ED13B1A5E06620014413E /* PartyListDataSource.swift */; };
+		040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040ED13E1A5E09A80014413E /* PartyListCell.swift */; };
 		044468231A5DD75100B22106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468221A5DD75100B22106 /* AppDelegate.swift */; };
 		044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468241A5DD75100B22106 /* PartyListViewController.swift */; };
 		044468271A5DD75100B22106 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468261A5DD75100B22106 /* DetailViewController.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		040ED13B1A5E06620014413E /* PartyListDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyListDataSource.swift; sourceTree = "<group>"; };
+		040ED13E1A5E09A80014413E /* PartyListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyListCell.swift; sourceTree = "<group>"; };
 		0444681D1A5DD75100B22106 /* WWDC Parties.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WWDC Parties.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044468211A5DD75100B22106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044468221A5DD75100B22106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040ED13D1A5E09860014413E /* Party List */ = {
+			isa = PBXGroup;
+			children = (
+				044468241A5DD75100B22106 /* PartyListViewController.swift */,
+				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
+				040ED13B1A5E06620014413E /* PartyListDataSource.swift */,
+				040ED13E1A5E09A80014413E /* PartyListCell.swift */,
+			);
+			name = "Party List";
+			sourceTree = "<group>";
+		};
 		044468141A5DD75100B22106 = {
 			isa = PBXGroup;
 			children = (
@@ -87,14 +100,12 @@
 			children = (
 				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
 				044468221A5DD75100B22106 /* AppDelegate.swift */,
-				044468241A5DD75100B22106 /* PartyListViewController.swift */,
 				044468261A5DD75100B22106 /* DetailViewController.swift */,
 				044468281A5DD75100B22106 /* Main.storyboard */,
 				0444682B1A5DD75100B22106 /* Images.xcassets */,
 				0444682D1A5DD75100B22106 /* LaunchScreen.xib */,
 				044468201A5DD75100B22106 /* Supporting Files */,
-				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
-				040ED13B1A5E06620014413E /* PartyListDataSource.swift */,
+				040ED13D1A5E09860014413E /* Party List */,
 			);
 			path = "WWDC Parties";
 			sourceTree = "<group>";
@@ -225,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				044468271A5DD75100B22106 /* DetailViewController.swift in Sources */,
+				040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */,
 				044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */,
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
 				044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */,
