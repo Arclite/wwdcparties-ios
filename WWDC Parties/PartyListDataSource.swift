@@ -5,7 +5,7 @@ import UIKit
 
 private let PartyListCellIdentifier = "PartyListCell"
 
-class PartyListDataSource: NSObject, UITableViewDataSource {
+class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 	var parties = [Party]()
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -16,5 +16,9 @@ class PartyListDataSource: NSObject, UITableViewDataSource {
 		let partyCell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as PartyListCell
 		partyCell.party = parties[indexPath.row]
 		return partyCell
+	}
+	
+	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String {
+		return "Sunday, June 1st"
 	}
 }

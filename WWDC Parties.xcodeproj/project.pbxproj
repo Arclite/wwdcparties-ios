@@ -70,7 +70,6 @@
 			isa = PBXGroup;
 			children = (
 				044468241A5DD75100B22106 /* PartyListViewController.swift */,
-				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
 				040ED13B1A5E06620014413E /* PartyListDataSource.swift */,
 				040ED13E1A5E09A80014413E /* PartyListCell.swift */,
 			);
@@ -101,6 +100,7 @@
 				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
 				044468221A5DD75100B22106 /* AppDelegate.swift */,
 				044468261A5DD75100B22106 /* DetailViewController.swift */,
+				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
 				044468281A5DD75100B22106 /* Main.storyboard */,
 				0444682B1A5DD75100B22106 /* Images.xcassets */,
 				0444682D1A5DD75100B22106 /* LaunchScreen.xib */,
