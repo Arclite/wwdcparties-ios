@@ -6,6 +6,7 @@ import UIKit
 class PartyListViewController: UITableViewController {
 	@IBOutlet var dataSource: PartyListDataSource!
 	var detailViewController: DetailViewController? = nil
+	let partyHandler = PartyHandler()
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -26,7 +27,7 @@ class PartyListViewController: UITableViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
-		PartyHandler.sharedHandler.fetchParties { (parties, error) in
+		partyHandler.fetchParties { (parties, error) in
 			self.dataSource.parties = parties
 			dispatch_async(dispatch_get_main_queue(), { self.tableView.reloadData() })
 		}
