@@ -1,16 +1,14 @@
-//
-//  MasterViewController.swift
-//  WWDC Parties
-//
 //  Created by Geoff Pado on 1/7/15.
 //  Copyright (c) 2015 Cocoatype, LLC. All rights reserved.
-//
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+private let ShowPartyInfoSegueIdentifier = "ShowPartyInfo"
+
+class PartyListViewController: UITableViewController {
+	@IBOutlet var dataSource: PartyListDataSource!
 	var detailViewController: DetailViewController? = nil
-	var parties = [Party]()
+	let partyHandler = PartyHandler()
 
 	override func awakeFromNib() {
 		super.awakeFromNib()
@@ -31,32 +29,20 @@ class MasterViewController: UITableViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
-		PartyHandler.sharedHandler.fetchParties { (parties, error) in
-			self.parties = parties
+		partyHandler.fetchParties { (parties, error) in
+			self.dataSource.parties = parties
 			dispatch_async(dispatch_get_main_queue(), { self.tableView.reloadData() })
 		}
 	}
 
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "showDetail" {
-		    if let indexPath = self.tableView.indexPathForSelectedRow() {
-		        let party = parties[indexPath.row]
+		if segue.identifier == ShowPartyInfoSegueIdentifier {
+		    if let indexPath = tableView.indexPathForSelectedRow() {
+		        let party = dataSource.parties[indexPath.row]
 		        let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
 		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
 		        controller.navigationItem.leftItemsSupplementBackButton = true
 		    }
 		}
-	}
-
-	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return parties.count
-	}
-
-	override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-
-		let party = parties[indexPath.row]
-		cell.textLabel.text = party.name
-		return cell
 	}
 }

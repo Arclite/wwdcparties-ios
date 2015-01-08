@@ -16,13 +16,7 @@ struct Party: Printable {
 
 typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
 
-private let _SharedPartyHandler = PartyHandler()
-
 class PartyHandler {
-	class var sharedHandler: PartyHandler {
-		return _SharedPartyHandler
-	}
-	
 	class var request: NSURLRequest? {
 		if let partiesURL = NSURL(string: "/parties", relativeToURL: APIBaseURL) {
 			return NSURLRequest(URL: partiesURL)
