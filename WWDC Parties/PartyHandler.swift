@@ -3,17 +3,6 @@
 
 import UIKit
 
-struct Party: Printable {
-	let name :String
-	var description: String {
-		return name
-	}
-	
-	init(_ partyJSON: JSON) {
-		name = partyJSON["name"].stringValue
-	}
-}
-
 typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
 
 class PartyHandler {
