@@ -16,15 +16,15 @@ struct Party: Printable {
 
 typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
 
-private let _SharedAPIHandler = APIHandler()
+private let _SharedPartyHandler = PartyHandler()
 
-class APIHandler: NSObject {
-	class var sharedHandler: APIHandler {
-		return _SharedAPIHandler
+class PartyHandler {
+	class var sharedHandler: PartyHandler {
+		return _SharedPartyHandler
 	}
 	
-	var partiesRequest: NSURLRequest? {
-		if let partiesURL = NSURL(string: "/parties", relativeToURL: APIRequest.baseURL()) {
+	class var request: NSURLRequest? {
+		if let partiesURL = NSURL(string: "/parties", relativeToURL: APIBaseURL) {
 			return NSURLRequest(URL: partiesURL)
 		} else {
 			return nil
@@ -32,7 +32,7 @@ class APIHandler: NSObject {
 	}
 
 	func fetchParties(completionHandler: PartyListCompletionHandler) {
-		if let request = partiesRequest {
+		if let request = PartyHandler.request {
 			NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
 				let partiesJSONArray = JSON(data: data).arrayValue
 				let parties = map(partiesJSONArray) { Party($0) }

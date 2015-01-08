@@ -14,8 +14,7 @@
 		0444682C1A5DD75100B22106 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444682B1A5DD75100B22106 /* Images.xcassets */; };
 		0444682F1A5DD75100B22106 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0444682D1A5DD75100B22106 /* LaunchScreen.xib */; };
 		0444683B1A5DD75100B22106 /* WWDC_PartiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */; };
-		044468451A5DE1EF00B22106 /* APIHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468441A5DE1EF00B22106 /* APIHandler.swift */; };
-		044468471A5DE48A00B22106 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468461A5DE48A00B22106 /* APIRequest.swift */; };
+		044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468441A5DE1EF00B22106 /* PartyHandler.swift */; };
 		044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468481A5DEF9000B22106 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,8 +40,7 @@
 		044468341A5DD75100B22106 /* WWDC PartiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC PartiesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044468391A5DD75100B22106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_PartiesTests.swift; sourceTree = "<group>"; };
-		044468441A5DE1EF00B22106 /* APIHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHandler.swift; sourceTree = "<group>"; };
-		044468461A5DE48A00B22106 /* APIRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		044468441A5DE1EF00B22106 /* PartyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyHandler.swift; sourceTree = "<group>"; };
 		044468481A5DEF9000B22106 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,8 +91,7 @@
 				0444682B1A5DD75100B22106 /* Images.xcassets */,
 				0444682D1A5DD75100B22106 /* LaunchScreen.xib */,
 				044468201A5DD75100B22106 /* Supporting Files */,
-				044468441A5DE1EF00B22106 /* APIHandler.swift */,
-				044468461A5DE48A00B22106 /* APIRequest.swift */,
+				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
 			);
 			path = "WWDC Parties";
 			sourceTree = "<group>";
@@ -228,8 +225,7 @@
 				044468251A5DD75100B22106 /* MasterViewController.swift in Sources */,
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
 				044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */,
-				044468471A5DE48A00B22106 /* APIRequest.swift in Sources */,
-				044468451A5DE1EF00B22106 /* APIHandler.swift in Sources */,
+				044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +419,7 @@
 				044468401A5DD75100B22106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		044468411A5DD75100B22106 /* Build configuration list for PBXNativeTarget "WWDC PartiesTests" */ = {
 			isa = XCConfigurationList;
@@ -431,6 +428,7 @@
 				044468431A5DD75100B22106 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

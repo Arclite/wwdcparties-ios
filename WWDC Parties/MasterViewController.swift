@@ -31,7 +31,7 @@ class MasterViewController: UITableViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
-		APIHandler.sharedHandler.fetchParties { (parties, error) in
+		PartyHandler.sharedHandler.fetchParties { (parties, error) in
 			self.parties = parties
 			dispatch_async(dispatch_get_main_queue(), { self.tableView.reloadData() })
 		}

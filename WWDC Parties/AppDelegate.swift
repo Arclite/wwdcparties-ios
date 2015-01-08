@@ -8,6 +8,15 @@
 
 import UIKit
 
+
+var APIBaseURL: NSURL! {
+	if let baseURLString = NSProcessInfo.processInfo().environment["API_BASE"] as? String {
+		return NSURL(string: baseURLString)
+	}
+	
+	return NSURL(string: "http://api.wwdcparties.com")
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
