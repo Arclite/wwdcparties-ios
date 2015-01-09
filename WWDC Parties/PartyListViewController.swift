@@ -29,9 +29,18 @@ class PartyListViewController: UITableViewController {
 	
 	override func viewDidAppear(animated: Bool) {
 		super.viewDidAppear(animated)
+		refreshPartyList(nil)
+	}
+	
+	@IBAction func refreshPartyList(sender: UIRefreshControl?) {
 		partyHandler.fetchParties { (parties, error) in
 			self.dataSource.parties = parties
-			dispatch_async(dispatch_get_main_queue(), { self.tableView.reloadData() })
+			dispatch_async(dispatch_get_main_queue()) {
+				self.tableView.reloadData()
+				if let refreshControl = sender {
+					refreshControl.endRefreshing()
+				}
+			}
 		}
 	}
 
