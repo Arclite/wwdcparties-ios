@@ -28,7 +28,7 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let partyCell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as PartyListCell
-		partyCell.party = partiesForDate(days()[indexPath.section])[indexPath.row]
+		partyCell.party = partyForIndexPath(indexPath)
 		return partyCell
 	}
 	
@@ -42,5 +42,9 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 	
 	func partiesForDate(date: NSDate) -> [Party] {
 		return parties.filter() { $0.listingDay.isEqualToDate(date) }
+	}
+	
+	func partyForIndexPath(indexPath: NSIndexPath) -> Party {
+		return partiesForDate(days()[indexPath.section])[indexPath.row]
 	}
 }

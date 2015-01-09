@@ -48,7 +48,7 @@ class PartyListViewController: UITableViewController {
 		if segue.identifier == ShowPartyInfoSegueIdentifier {
 		    if let indexPath = tableView.indexPathForSelectedRow() {
 		        let controller = (segue.destinationViewController as UINavigationController).topViewController as PartyInfoViewController
-				controller.party = dataSource.parties[indexPath.row]
+				controller.party = dataSource.partyForIndexPath(indexPath)
 		        controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
 		        controller.navigationItem.leftItemsSupplementBackButton = true
 		    }
