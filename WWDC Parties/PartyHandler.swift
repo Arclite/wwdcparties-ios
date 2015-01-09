@@ -18,7 +18,7 @@ class PartyHandler {
 		if let request = PartyHandler.request {
 			NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
 				let partiesJSONArray = JSON(data: data).arrayValue
-				let parties = map(partiesJSONArray) { Party($0) }
+				let parties = map(partiesJSONArray) { Party($0) }.sorted(){ $0.startDate.compare($1.startDate) == NSComparisonResult.OrderedAscending }
 				completionHandler(parties, error)
 			}.resume()
 		}
