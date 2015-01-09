@@ -8,17 +8,18 @@ private let PartyListCellIdentifier = "PartyListCell"
 class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 	var parties = [Party]()
 	
+	
 	func numberOfSectionsInTableView(UITableView) -> Int {
 		return days().count
 	}
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return min(1, parties.count)
+		return partiesForDate(days()[section]).count
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let partyCell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as PartyListCell
-		partyCell.party = parties[indexPath.row]
+		partyCell.party = partiesForDate(days()[indexPath.section])[indexPath.row]
 		return partyCell
 	}
 	
@@ -27,6 +28,10 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 	}
 	
 	func days() -> [NSDate] {
-		return parties.reduce([NSDate]()) { (contains($0, $1.listingDay!) ? $0 : $0 + [$1.listingDay!]) }
+		return parties.reduce([NSDate]()) { (contains($0, $1.listingDay) ? $0 : $0 + [$1.listingDay]) }
+	}
+	
+	func partiesForDate(date: NSDate) -> [Party] {
+		return parties.filter() { $0.listingDay.isEqualToDate(date) }
 	}
 }
