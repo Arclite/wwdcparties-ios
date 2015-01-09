@@ -8,8 +8,12 @@ private let PartyListCellIdentifier = "PartyListCell"
 class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 	var parties = [Party]()
 	
+	func numberOfSectionsInTableView(UITableView) -> Int {
+		return days().count
+	}
+	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return parties.count
+		return min(1, parties.count)
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -20,5 +24,9 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 	
 	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String {
 		return "Sunday, June 1st"
+	}
+	
+	func days() -> [NSDate] {
+		return parties.reduce([NSDate]()) { (contains($0, $1.listingDay!) ? $0 : $0 + [$1.listingDay!]) }
 	}
 }

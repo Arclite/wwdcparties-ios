@@ -13,6 +13,10 @@ struct Party: Printable {
 	var startDate: NSDate { return NSDate(timeIntervalSince1970: startTimeInterval) }
 	var endDate: NSDate { return NSDate(timeIntervalSince1970: endTimeInterval) }
 	var sponsorURL: NSURL? { return NSURL(string: sponsorURLString) }
+	var listingDay: NSDate? {
+		let components = NSCalendar.currentCalendar().components((.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit), fromDate: startDate)
+		return NSCalendar.currentCalendar().dateFromComponents(components)
+	}
 	
 	var description: String {
 		return name
