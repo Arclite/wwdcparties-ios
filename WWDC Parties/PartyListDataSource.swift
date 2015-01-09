@@ -4,10 +4,19 @@
 import UIKit
 
 private let PartyListCellIdentifier = "PartyListCell"
+private var PartyListDateFormatter :NSDateFormatter?
 
 class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
 	var parties = [Party]()
-	
+	class var dateFormatter: NSDateFormatter {
+		if let dateFormatter = PartyListDateFormatter {
+			return dateFormatter
+		} else {
+			PartyListDateFormatter = NSDateFormatter()
+			PartyListDateFormatter!.dateStyle = .LongStyle
+			return PartyListDateFormatter!
+		}
+	}
 	
 	func numberOfSectionsInTableView(UITableView) -> Int {
 		return days().count
@@ -24,7 +33,7 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 	}
 	
 	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String {
-		return "Sunday, June 1st"
+		return PartyListDataSource.dateFormatter.stringFromDate(days()[section])
 	}
 	
 	func days() -> [NSDate] {
