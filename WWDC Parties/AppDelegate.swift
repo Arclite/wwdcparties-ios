@@ -58,8 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
 	func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController:UIViewController!, ontoPrimaryViewController primaryViewController:UIViewController!) -> Bool {
 	    if let secondaryAsNavController = secondaryViewController as? UINavigationController {
-	        if let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController {
-	            if topAsDetailController.detailItem == nil {
+	        if let topAsDetailController = secondaryAsNavController.topViewController as? PartyInfoViewController {
+	            if topAsDetailController.party == nil {
 	                // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
 	                return true
 	            }
