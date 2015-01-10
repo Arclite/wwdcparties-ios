@@ -8,13 +8,12 @@
 
 import UIKit
 
-
 var APIBaseURL: NSURL! {
 	if let baseURLString = NSProcessInfo.processInfo().environment["API_BASE"] as? String {
 		return NSURL(string: baseURLString)
 	}
 	
-	return NSURL(string: "http://api.wwdcparties.com")
+	return NSURL(string: "https://2015.wwdcparties.com")
 }
 
 @UIApplicationMain
