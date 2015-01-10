@@ -3,6 +3,8 @@
 
 import UIKit
 
+private let PartyInfoUserActivityType = "com.cocoatype.wwdcparties.party-view"
+
 class PartyInfoViewController: UIViewController {
 	@IBOutlet weak var nameLabel: UILabel!
 
@@ -15,12 +17,20 @@ class PartyInfoViewController: UIViewController {
 	func configureView() {
 		if let representedParty = self.party {
 			navigationItem.title = representedParty.name
+			self.userActivity = viewActivityForParty(representedParty)
 		}
 	}
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.configureView()
+	}
+	
+	func viewActivityForParty(party: Party) -> NSUserActivity {
+		let userActivity = NSUserActivity(activityType: PartyInfoUserActivityType)
+		userActivity.webpageURL = NSURL(string: "/parties/\(party.slug)", relativeToURL: APIBaseURL)
+		
+		return userActivity
 	}
 }
 

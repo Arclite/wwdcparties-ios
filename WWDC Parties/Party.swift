@@ -9,6 +9,7 @@ struct Party: Printable {
 	let endTimeInterval: NSTimeInterval
 	let sponsorName: String
 	let sponsorURLString: String
+	let slug: String
 	
 	var startDate: NSDate { return NSDate(timeIntervalSince1970: startTimeInterval) }
 	var endDate: NSDate { return NSDate(timeIntervalSince1970: endTimeInterval) }
@@ -32,5 +33,6 @@ struct Party: Printable {
 		endTimeInterval = partyJSON["end_time"].doubleValue
 		sponsorName = partyJSON["sponsor_name"].stringValue
 		sponsorURLString = partyJSON["sponsor_url"].stringValue
+		slug = partyJSON["slug"].stringValue
 	}
 }
