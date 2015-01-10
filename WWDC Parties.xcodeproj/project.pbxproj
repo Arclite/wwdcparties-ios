@@ -11,7 +11,7 @@
 		040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040ED13E1A5E09A80014413E /* PartyListCell.swift */; };
 		044468231A5DD75100B22106 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468221A5DD75100B22106 /* AppDelegate.swift */; };
 		044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468241A5DD75100B22106 /* PartyListViewController.swift */; };
-		044468271A5DD75100B22106 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468261A5DD75100B22106 /* DetailViewController.swift */; };
+		044468271A5DD75100B22106 /* PartyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468261A5DD75100B22106 /* PartyInfoViewController.swift */; };
 		0444682A1A5DD75100B22106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044468281A5DD75100B22106 /* Main.storyboard */; };
 		0444682C1A5DD75100B22106 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444682B1A5DD75100B22106 /* Images.xcassets */; };
 		0444682F1A5DD75100B22106 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0444682D1A5DD75100B22106 /* LaunchScreen.xib */; };
@@ -38,7 +38,7 @@
 		044468211A5DD75100B22106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		044468221A5DD75100B22106 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		044468241A5DD75100B22106 /* PartyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyListViewController.swift; sourceTree = "<group>"; };
-		044468261A5DD75100B22106 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		044468261A5DD75100B22106 /* PartyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartyInfoViewController.swift; sourceTree = "<group>"; };
 		044468291A5DD75100B22106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0444682B1A5DD75100B22106 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0444682E1A5DD75100B22106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +48,7 @@
 		044468441A5DE1EF00B22106 /* PartyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyHandler.swift; sourceTree = "<group>"; };
 		044468481A5DEF9000B22106 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		04AEF8761A5E1C7200135778 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		04E00E961A60AC2E00EE9A99 /* WWDC Parties.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Parties.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		0444681F1A5DD75100B22106 /* WWDC Parties */ = {
 			isa = PBXGroup;
 			children = (
+				04E00E961A60AC2E00EE9A99 /* WWDC Parties.entitlements */,
 				04AEF87B1A5E207A00135778 /* Source */,
 				04AEF87A1A5E206800135778 /* Interface */,
 				044468201A5DD75100B22106 /* Supporting Files */,
@@ -144,7 +146,7 @@
 		04AEF8791A5E205D00135778 /* Party Info */ = {
 			isa = PBXGroup;
 			children = (
-				044468261A5DD75100B22106 /* DetailViewController.swift */,
+				044468261A5DD75100B22106 /* PartyInfoViewController.swift */,
 			);
 			name = "Party Info";
 			sourceTree = "<group>";
@@ -219,6 +221,12 @@
 				TargetAttributes = {
 					0444681C1A5DD75100B22106 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 287EDDET2B;
+						SystemCapabilities = {
+							com.apple.SafariKeychain = {
+								enabled = 1;
+							};
+						};
 					};
 					044468331A5DD75100B22106 = {
 						CreatedOnToolsVersion = 6.1;
@@ -270,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044468271A5DD75100B22106 /* DetailViewController.swift in Sources */,
+				044468271A5DD75100B22106 /* PartyInfoViewController.swift in Sources */,
 				040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */,
 				044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */,
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
@@ -402,9 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WWDC Parties/WWDC Parties.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WWDC Parties/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e33c25fa-2c26-4b77-b0a0-c523dd8a9863";
 			};
 			name = Debug;
 		};
@@ -412,9 +424,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "WWDC Parties/WWDC Parties.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "WWDC Parties/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "e33c25fa-2c26-4b77-b0a0-c523dd8a9863";
 			};
 			name = Release;
 		};
