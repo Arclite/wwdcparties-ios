@@ -416,7 +416,7 @@
 				INFOPLIST_FILE = "WWDC Parties/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e33c25fa-2c26-4b77-b0a0-c523dd8a9863";
 			};
 			name = Debug;
 		};
@@ -430,7 +430,7 @@
 				INFOPLIST_FILE = "WWDC Parties/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "e33c25fa-2c26-4b77-b0a0-c523dd8a9863";
 			};
 			name = Release;
 		};

@@ -5,6 +5,7 @@
 	<key>com.apple.developer.associated-domains</key>
 	<array>
 		<string>activitycontinuation:wwdcparties.com</string>
+		<string>activitycontinuation:2015.wwdcparties.com</string>
 	</array>
 </dict>
 </plist>
