@@ -100,7 +100,6 @@
 		0444681F1A5DD75100B22106 /* WWDC Parties */ = {
 			isa = PBXGroup;
 			children = (
-				04E00E961A60AC2E00EE9A99 /* WWDC Parties.entitlements */,
 				04AEF87B1A5E207A00135778 /* Source */,
 				04AEF87A1A5E206800135778 /* Interface */,
 				044468201A5DD75100B22106 /* Supporting Files */,
@@ -111,6 +110,7 @@
 		044468201A5DD75100B22106 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				04E00E961A60AC2E00EE9A99 /* WWDC Parties.entitlements */,
 				044468211A5DD75100B22106 /* Info.plist */,
 			);
 			name = "Supporting Files";
