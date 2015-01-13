@@ -6,6 +6,7 @@ import UIKit
 private let PartyInfoUserActivityType = "com.cocoatype.wwdcparties.party-view"
 
 class PartyInfoViewController: UIViewController {
+	@IBOutlet weak var shareBarButtonItem: UIBarButtonItem!
 	@IBOutlet weak var nameLabel: UILabel!
 
 	var party: Party? {
@@ -31,6 +32,14 @@ class PartyInfoViewController: UIViewController {
 		userActivity.webpageURL = NSURL(string: "/parties/\(party.slug)", relativeToURL: APIBaseURL)
 		
 		return userActivity
+	}
+	
+	@IBAction func showShare() {
+		if let party = party {
+			let activityViewController = UIActivityViewController(activityItems: [party.name, party.shareURL], applicationActivities:nil)
+			activityViewController.popoverPresentationController?.barButtonItem = shareBarButtonItem
+			self.presentViewController(activityViewController, animated: true, completion: nil)
+		}
 	}
 }
 

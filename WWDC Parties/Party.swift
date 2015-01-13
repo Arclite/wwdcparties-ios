@@ -14,6 +14,13 @@ struct Party: Printable {
 	var startDate: NSDate { return NSDate(timeIntervalSince1970: startTimeInterval) }
 	var endDate: NSDate { return NSDate(timeIntervalSince1970: endTimeInterval) }
 	var sponsorURL: NSURL? { return NSURL(string: sponsorURLString) }
+	var shareURL: NSURL {
+		if let partyURL = NSURL(string: "/parties/\(slug)", relativeToURL: APIBaseURL) {
+			return partyURL
+		} else {
+			return APIBaseURL
+		}
+	}
 	var listingDay: NSDate {
 		let components = NSCalendar.currentCalendar().components((.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit), fromDate: startDate)
 		if let listingDay = NSCalendar.currentCalendar().dateFromComponents(components) {
