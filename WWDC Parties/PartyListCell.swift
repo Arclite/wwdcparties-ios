@@ -6,7 +6,7 @@ import UIKit
 class PartyListCell: UITableViewCell {
 	var party: Party? {
 		didSet {
-			textLabel.text = party?.name
+			textLabel?.text = party?.name
 		}
 	}
 }
