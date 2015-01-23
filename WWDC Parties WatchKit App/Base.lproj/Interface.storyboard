@@ -37,34 +37,22 @@
             </objects>
             <point key="canvasLocation" x="235" y="347"/>
         </scene>
-        <!--Interface Controller-->
+        <!--Party Info Controller-->
         <scene sceneID="UG4-vR-God">
             <objects>
-                <controller id="piB-97-w5K">
+                <controller id="piB-97-w5K" customClass="PartyInfoController" customModule="WWDC_Parties_WatchKit_Extension">
                     <items>
-                        <label width="1" alignment="left" text="Introducing Mapbox GL" numberOfLines="0" id="jLZ-If-Q7r">
+                        <label width="1" alignment="left" text="Party Name" numberOfLines="0" id="jLZ-If-Q7r">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
                         </label>
                         <group width="1" alignment="left" layout="vertical" spacing="0.0" id="PY6-vC-JYN">
                             <items>
-                                <dateLabel alignment="left" numberOfLines="0" format="'Begins:' EEEE, h:mm a" id="2kX-Ud-V2O">
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                    <date key="previewedDate" timeIntervalSinceReferenceDate="2754000">
-                                        <!--2001-02-01 21:00:00 +0000-->
-                                    </date>
-                                </dateLabel>
-                                <dateLabel alignment="left" numberOfLines="0" format="'Ends:' h:mm a" id="tCS-C4-NEr">
-                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
-                                    <date key="previewedDate" timeIntervalSinceReferenceDate="2754000">
-                                        <!--2001-02-01 21:00:00 +0000-->
-                                    </date>
-                                </dateLabel>
+                                <label alignment="left" text="Date/Time" numberOfLines="0" id="gM3-iI-ohi">
+                                    <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                                </label>
                             </items>
                         </group>
-                        <label alignment="left" numberOfLines="0" id="imt-L0-iAI">
-                            <string key="text">Mapbox HQ
-149 9th Street</string>
-                        </label>
+                        <label alignment="left" text="Address" numberOfLines="0" id="imt-L0-iAI"/>
                         <button width="1" alignment="left" verticalAlignment="bottom" title="View Map" id="kHA-Xa-rQT">
                             <connections>
                                 <segue destination="eTp-z4-7Gd" kind="push" id="JaQ-zr-xr2"/>
@@ -79,9 +67,14 @@
                             <menuItem title="Share" icon="share" id="SH5-p8-6X3"/>
                         </items>
                     </menu>
+                    <connections>
+                        <outlet property="addressLabel" destination="imt-L0-iAI" id="SlF-Hn-XdX"/>
+                        <outlet property="dateLabel" destination="gM3-iI-ohi" id="z9r-sn-HlV"/>
+                        <outlet property="nameLabel" destination="jLZ-If-Q7r" id="afU-Mj-r7M"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="553" y="361"/>
+            <point key="canvasLocation" x="535" y="347"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="BOz-TT-tkC">
@@ -121,7 +114,7 @@
                     </items>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="871" y="347"/>
+            <point key="canvasLocation" x="835" y="347"/>
         </scene>
         <!--Dynamic Notification Interface Controller-->
         <scene sceneID="rkl-nn-GG0">

@@ -29,6 +29,7 @@
 		04DF35C71A722C9100C78C70 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DF35C61A722C9100C78C70 /* Images.xcassets */; };
 		04DF35CA1A722C9100C78C70 /* WWDC Parties WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 04DF35AD1A722C9000C78C70 /* WWDC Parties WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		04DF35D41A72397900C78C70 /* PartyRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF35D31A72397900C78C70 /* PartyRow.swift */; };
+		04DF35D81A723CC200C78C70 /* PartyInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF35D71A723CC200C78C70 /* PartyInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		04DF35C41A722C9100C78C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		04DF35C61A722C9100C78C70 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04DF35D31A72397900C78C70 /* PartyRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyRow.swift; sourceTree = "<group>"; };
+		04DF35D71A723CC200C78C70 /* PartyInfoController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyInfoController.swift; sourceTree = "<group>"; };
 		04E00E961A60AC2E00EE9A99 /* WWDC Parties.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Parties.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -241,9 +243,10 @@
 				04DF35B21A722C9000C78C70 /* InterfaceController.swift */,
 				04DF35B41A722C9000C78C70 /* NotificationController.swift */,
 				04DF35B61A722C9000C78C70 /* GlanceController.swift */,
+				04DF35D71A723CC200C78C70 /* PartyInfoController.swift */,
+				04DF35D31A72397900C78C70 /* PartyRow.swift */,
 				04DF35B81A722C9000C78C70 /* Images.xcassets */,
 				04DF35AF1A722C9000C78C70 /* Supporting Files */,
-				04DF35D31A72397900C78C70 /* PartyRow.swift */,
 			);
 			path = "WWDC Parties WatchKit Extension";
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 			files = (
 				04DF35B51A722C9000C78C70 /* NotificationController.swift in Sources */,
 				04DF35D41A72397900C78C70 /* PartyRow.swift in Sources */,
+				04DF35D81A723CC200C78C70 /* PartyInfoController.swift in Sources */,
 				04DF35B31A722C9000C78C70 /* InterfaceController.swift in Sources */,
 				04DF35B71A722C9000C78C70 /* GlanceController.swift in Sources */,
 			);
