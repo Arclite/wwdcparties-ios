@@ -3,25 +3,25 @@
 
 import Foundation
 
-struct Party: Printable {
-	let name: String
-	let startTimeInterval: NSTimeInterval
-	let endTimeInterval: NSTimeInterval
-	let sponsorName: String
-	let sponsorURLString: String
-	let slug: String
+public struct Party: Printable {
+	public let name: String
+	public let startTimeInterval: NSTimeInterval
+	public let endTimeInterval: NSTimeInterval
+	public let sponsorName: String
+	public let sponsorURLString: String
+	public let slug: String
 	
-	var startDate: NSDate { return NSDate(timeIntervalSince1970: startTimeInterval) }
-	var endDate: NSDate { return NSDate(timeIntervalSince1970: endTimeInterval) }
-	var sponsorURL: NSURL? { return NSURL(string: sponsorURLString) }
-	var shareURL: NSURL {
+	public var startDate: NSDate { return NSDate(timeIntervalSince1970: startTimeInterval) }
+	public var endDate: NSDate { return NSDate(timeIntervalSince1970: endTimeInterval) }
+	public var sponsorURL: NSURL? { return NSURL(string: sponsorURLString) }
+	public var shareURL: NSURL {
 		if let partyURL = NSURL(string: "/parties/\(slug)", relativeToURL: APIBaseURL) {
 			return partyURL
 		} else {
 			return APIBaseURL
 		}
 	}
-	var listingDay: NSDate {
+	public var listingDay: NSDate {
 		let components = NSCalendar.currentCalendar().components((.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit), fromDate: startDate)
 		if let listingDay = NSCalendar.currentCalendar().dateFromComponents(components) {
 			return listingDay
@@ -30,11 +30,11 @@ struct Party: Printable {
 		}
 	}
 	
-	var description: String {
+	public var description: String {
 		return name
 	}
 	
-	init(_ partyJSON: JSON) {
+	internal init(_ partyJSON: JSON) {
 		name = partyJSON["name"].stringValue
 		startTimeInterval = partyJSON["start_time"].doubleValue
 		endTimeInterval = partyJSON["end_time"].doubleValue

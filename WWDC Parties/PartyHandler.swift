@@ -3,9 +3,9 @@
 
 import UIKit
 
-typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
+public typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
 
-class PartyHandler {
+public class PartyHandler {
 	class var request: NSURLRequest? {
 		if let partiesURL = NSURL(string: "/parties", relativeToURL: APIBaseURL) {
 			return NSURLRequest(URL: partiesURL)
@@ -14,7 +14,7 @@ class PartyHandler {
 		}
 	}
 
-	func fetchParties(completionHandler: PartyListCompletionHandler) {
+	public func fetchParties(completionHandler: PartyListCompletionHandler) {
 		if let request = PartyHandler.request {
 			NSURLSession.sharedSession().dataTaskWithRequest(request) { (data, response, error) -> Void in
 				let partiesJSONArray = JSON(data: data).arrayValue
@@ -23,4 +23,6 @@ class PartyHandler {
 			}.resume()
 		}
 	}
+	
+	public init() {}
 }

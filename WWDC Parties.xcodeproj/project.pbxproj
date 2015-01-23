@@ -15,13 +15,18 @@
 		0444682A1A5DD75100B22106 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044468281A5DD75100B22106 /* Main.storyboard */; };
 		0444682C1A5DD75100B22106 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0444682B1A5DD75100B22106 /* Images.xcassets */; };
 		0444682F1A5DD75100B22106 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0444682D1A5DD75100B22106 /* LaunchScreen.xib */; };
-		0444683B1A5DD75100B22106 /* WWDC_PartiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */; };
-		044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468441A5DE1EF00B22106 /* PartyHandler.swift */; };
-		044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468481A5DEF9000B22106 /* SwiftyJSON.swift */; };
-		047170C61A725F0500F5C22B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 047170C51A725F0500F5C22B /* MMWormhole.m */; };
-		047170C91A72603A00F5C22B /* WWDCPartiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */; };
+		047170D41A72631700F5C22B /* WWDCPartiesAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 047170D31A72631700F5C22B /* WWDCPartiesAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		047170DA1A72631700F5C22B /* WWDCPartiesAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */; };
+		047170E31A72631700F5C22B /* WWDCPartiesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047170E21A72631700F5C22B /* WWDCPartiesAPITests.swift */; };
+		047170E61A72631700F5C22B /* WWDCPartiesAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */; };
+		047170E71A72631700F5C22B /* WWDCPartiesAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		047170EF1A72636C00F5C22B /* PartyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468441A5DE1EF00B22106 /* PartyHandler.swift */; };
+		047170F01A72637100F5C22B /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8761A5E1C7200135778 /* Party.swift */; };
+		047170F11A72637400F5C22B /* WWDCPartiesAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */; };
+		047170F21A7263A100F5C22B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 047170C51A725F0500F5C22B /* MMWormhole.m */; };
+		047170F31A7263A600F5C22B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468481A5DEF9000B22106 /* SwiftyJSON.swift */; };
+		047170F41A72646D00F5C22B /* MMWormhole.h in Headers */ = {isa = PBXBuildFile; fileRef = 047170C41A725F0500F5C22B /* MMWormhole.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0471769A1A64C17B00B897F1 /* PartyInfoSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047176991A64C17B00B897F1 /* PartyInfoSharer.swift */; };
-		04AEF8771A5E1C7200135778 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8761A5E1C7200135778 /* Party.swift */; };
 		04DF35B31A722C9000C78C70 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF35B21A722C9000C78C70 /* InterfaceController.swift */; };
 		04DF35B51A722C9000C78C70 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF35B41A722C9000C78C70 /* NotificationController.swift */; };
 		04DF35B71A722C9000C78C70 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF35B61A722C9000C78C70 /* GlanceController.swift */; };
@@ -35,12 +40,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		044468351A5DD75100B22106 /* PBXContainerItemProxy */ = {
+		047170DB1A72631700F5C22B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044468151A5DD75100B22106 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047170CE1A72631700F5C22B;
+			remoteInfo = WWDCPartiesAPI;
+		};
+		047170DD1A72631700F5C22B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 044468151A5DD75100B22106 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0444681C1A5DD75100B22106;
 			remoteInfo = "WWDC Parties";
+		};
+		047170E41A72631700F5C22B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044468151A5DD75100B22106 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 047170CE1A72631700F5C22B;
+			remoteInfo = WWDCPartiesAPI;
 		};
 		04DF35BE1A722C9000C78C70 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -59,6 +78,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		047170EB1A72631800F5C22B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				047170E71A72631700F5C22B /* WWDCPartiesAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		04DF35D11A722C9100C78C70 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,18 +113,22 @@
 		044468291A5DD75100B22106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0444682B1A5DD75100B22106 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		0444682E1A5DD75100B22106 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		044468341A5DD75100B22106 /* WWDC PartiesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WWDC PartiesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		044468391A5DD75100B22106 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_PartiesTests.swift; sourceTree = "<group>"; };
-		044468441A5DE1EF00B22106 /* PartyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyHandler.swift; sourceTree = "<group>"; };
+		044468441A5DE1EF00B22106 /* PartyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyHandler.swift; path = "../WWDC Parties/PartyHandler.swift"; sourceTree = "<group>"; };
 		044468481A5DEF9000B22106 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
-		047170C31A725F0500F5C22B /* WWDC Parties-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WWDC Parties-Bridging-Header.h"; sourceTree = "<group>"; };
 		047170C41A725F0500F5C22B /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
 		047170C51A725F0500F5C22B /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
 		047170C71A725FB100F5C22B /* WWDC Parties WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Parties WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWDCPartiesAPI.swift; sourceTree = "<group>"; };
+		047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WWDCPartiesAPI.swift; path = "../WWDC Parties/WWDCPartiesAPI.swift"; sourceTree = "<group>"; };
+		047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WWDCPartiesAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		047170D21A72631700F5C22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047170D31A72631700F5C22B /* WWDCPartiesAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWDCPartiesAPI.h; sourceTree = "<group>"; };
+		047170D91A72631700F5C22B /* WWDCPartiesAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WWDCPartiesAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		047170E11A72631700F5C22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		047170E21A72631700F5C22B /* WWDCPartiesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCPartiesAPITests.swift; sourceTree = "<group>"; };
 		047176991A64C17B00B897F1 /* PartyInfoSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyInfoSharer.swift; sourceTree = "<group>"; };
-		04AEF8761A5E1C7200135778 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		04AEF8761A5E1C7200135778 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Party.swift; path = "../WWDC Parties/Party.swift"; sourceTree = "<group>"; };
 		04DF35AD1A722C9000C78C70 /* WWDC Parties WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WWDC Parties WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04DF35B01A722C9000C78C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04DF35B11A722C9000C78C70 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
@@ -116,13 +150,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				047170E61A72631700F5C22B /* WWDCPartiesAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044468311A5DD75100B22106 /* Frameworks */ = {
+		047170CB1A72631700F5C22B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047170D61A72631700F5C22B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047170DA1A72631700F5C22B /* WWDCPartiesAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,9 +193,9 @@
 			isa = PBXGroup;
 			children = (
 				0444681F1A5DD75100B22106 /* WWDC Parties */,
-				044468371A5DD75100B22106 /* WWDC PartiesTests */,
-				04DF35AE1A722C9000C78C70 /* WWDC Parties WatchKit Extension */,
-				04DF35C01A722C9000C78C70 /* WWDC Parties WatchKit App */,
+				04DF35AE1A722C9000C78C70 /* Watch Extension */,
+				04DF35C01A722C9000C78C70 /* Watch App */,
+				047170D01A72631700F5C22B /* API */,
 				0444681E1A5DD75100B22106 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -161,9 +204,10 @@
 			isa = PBXGroup;
 			children = (
 				0444681D1A5DD75100B22106 /* WWDC Parties.app */,
-				044468341A5DD75100B22106 /* WWDC PartiesTests.xctest */,
 				04DF35AD1A722C9000C78C70 /* WWDC Parties WatchKit Extension.appex */,
 				04DF35BC1A722C9000C78C70 /* WWDC Parties WatchKit App.app */,
+				047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */,
+				047170D91A72631700F5C22B /* WWDCPartiesAPITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -174,6 +218,7 @@
 				04AEF87B1A5E207A00135778 /* Source */,
 				04AEF87A1A5E206800135778 /* Interface */,
 				044468201A5DD75100B22106 /* Supporting Files */,
+				044468371A5DD75100B22106 /* Tests */,
 			);
 			path = "WWDC Parties";
 			sourceTree = "<group>";
@@ -187,14 +232,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		044468371A5DD75100B22106 /* WWDC PartiesTests */ = {
+		044468371A5DD75100B22106 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */,
 				044468381A5DD75100B22106 /* Supporting Files */,
 			);
+			name = Tests;
 			path = "WWDC PartiesTests";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		044468381A5DD75100B22106 /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -210,17 +256,55 @@
 				047170C41A725F0500F5C22B /* MMWormhole.h */,
 				047170C51A725F0500F5C22B /* MMWormhole.m */,
 				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
-				047170C31A725F0500F5C22B /* WWDC Parties-Bridging-Header.h */,
 			);
 			name = "Third Party";
+			path = "../WWDC Parties";
+			sourceTree = "<group>";
+		};
+		047170D01A72631700F5C22B /* API */ = {
+			isa = PBXGroup;
+			children = (
+				047170C21A725EF100F5C22B /* Third Party */,
+				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
+				04AEF8761A5E1C7200135778 /* Party.swift */,
+				047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */,
+				047170D31A72631700F5C22B /* WWDCPartiesAPI.h */,
+				047170DF1A72631700F5C22B /* Tests */,
+				047170D11A72631700F5C22B /* Supporting Files */,
+			);
+			name = API;
+			path = WWDCPartiesAPI;
+			sourceTree = "<group>";
+		};
+		047170D11A72631700F5C22B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				047170D21A72631700F5C22B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		047170DF1A72631700F5C22B /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				047170E21A72631700F5C22B /* WWDCPartiesAPITests.swift */,
+				047170E01A72631700F5C22B /* Supporting Files */,
+			);
+			name = Tests;
+			path = WWDCPartiesAPITests;
+			sourceTree = SOURCE_ROOT;
+		};
+		047170E01A72631700F5C22B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				047170E11A72631700F5C22B /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		04AEF8781A5E204F00135778 /* Data Handling */ = {
 			isa = PBXGroup;
 			children = (
-				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
-				04AEF8761A5E1C7200135778 /* Party.swift */,
-				047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */,
 			);
 			name = "Data Handling";
 			sourceTree = "<group>";
@@ -248,7 +332,6 @@
 			isa = PBXGroup;
 			children = (
 				044468221A5DD75100B22106 /* AppDelegate.swift */,
-				047170C21A725EF100F5C22B /* Third Party */,
 				04AEF8781A5E204F00135778 /* Data Handling */,
 				040ED13D1A5E09860014413E /* Party List */,
 				04AEF8791A5E205D00135778 /* Party Info */,
@@ -256,7 +339,7 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
-		04DF35AE1A722C9000C78C70 /* WWDC Parties WatchKit Extension */ = {
+		04DF35AE1A722C9000C78C70 /* Watch Extension */ = {
 			isa = PBXGroup;
 			children = (
 				047170C71A725FB100F5C22B /* WWDC Parties WatchKit Extension.entitlements */,
@@ -268,6 +351,7 @@
 				04DF35B81A722C9000C78C70 /* Images.xcassets */,
 				04DF35AF1A722C9000C78C70 /* Supporting Files */,
 			);
+			name = "Watch Extension";
 			path = "WWDC Parties WatchKit Extension";
 			sourceTree = "<group>";
 		};
@@ -280,13 +364,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		04DF35C01A722C9000C78C70 /* WWDC Parties WatchKit App */ = {
+		04DF35C01A722C9000C78C70 /* Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				04DF35C31A722C9100C78C70 /* Interface.storyboard */,
 				04DF35C61A722C9100C78C70 /* Images.xcassets */,
 				04DF35C11A722C9000C78C70 /* Supporting Files */,
 			);
+			name = "Watch App";
 			path = "WWDC Parties WatchKit App";
 			sourceTree = "<group>";
 		};
@@ -300,6 +385,18 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		047170CC1A72631700F5C22B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047170D41A72631700F5C22B /* WWDCPartiesAPI.h in Headers */,
+				047170F41A72646D00F5C22B /* MMWormhole.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		0444681C1A5DD75100B22106 /* WWDC Parties */ = {
 			isa = PBXNativeTarget;
@@ -309,33 +406,54 @@
 				0444681A1A5DD75100B22106 /* Frameworks */,
 				0444681B1A5DD75100B22106 /* Resources */,
 				04DF35D11A722C9100C78C70 /* Embed App Extensions */,
+				047170EB1A72631800F5C22B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				04DF35C91A722C9100C78C70 /* PBXTargetDependency */,
+				047170E51A72631700F5C22B /* PBXTargetDependency */,
 			);
 			name = "WWDC Parties";
 			productName = "WWDC Parties";
 			productReference = 0444681D1A5DD75100B22106 /* WWDC Parties.app */;
 			productType = "com.apple.product-type.application";
 		};
-		044468331A5DD75100B22106 /* WWDC PartiesTests */ = {
+		047170CE1A72631700F5C22B /* WWDCPartiesAPI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 044468411A5DD75100B22106 /* Build configuration list for PBXNativeTarget "WWDC PartiesTests" */;
+			buildConfigurationList = 047170E81A72631800F5C22B /* Build configuration list for PBXNativeTarget "WWDCPartiesAPI" */;
 			buildPhases = (
-				044468301A5DD75100B22106 /* Sources */,
-				044468311A5DD75100B22106 /* Frameworks */,
-				044468321A5DD75100B22106 /* Resources */,
+				047170CA1A72631700F5C22B /* Sources */,
+				047170CB1A72631700F5C22B /* Frameworks */,
+				047170CC1A72631700F5C22B /* Headers */,
+				047170CD1A72631700F5C22B /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				044468361A5DD75100B22106 /* PBXTargetDependency */,
 			);
-			name = "WWDC PartiesTests";
-			productName = "WWDC PartiesTests";
-			productReference = 044468341A5DD75100B22106 /* WWDC PartiesTests.xctest */;
+			name = WWDCPartiesAPI;
+			productName = WWDCPartiesAPI;
+			productReference = 047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		047170D81A72631700F5C22B /* WWDCPartiesAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 047170EC1A72631800F5C22B /* Build configuration list for PBXNativeTarget "WWDCPartiesAPITests" */;
+			buildPhases = (
+				047170D51A72631700F5C22B /* Sources */,
+				047170D61A72631700F5C22B /* Frameworks */,
+				047170D71A72631700F5C22B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				047170DC1A72631700F5C22B /* PBXTargetDependency */,
+				047170DE1A72631700F5C22B /* PBXTargetDependency */,
+			);
+			name = WWDCPartiesAPITests;
+			productName = WWDCPartiesAPITests;
+			productReference = 047170D91A72631700F5C22B /* WWDCPartiesAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		04DF35AC1A722C9000C78C70 /* WWDC Parties WatchKit Extension */ = {
@@ -392,8 +510,12 @@
 							};
 						};
 					};
-					044468331A5DD75100B22106 = {
-						CreatedOnToolsVersion = 6.1;
+					047170CE1A72631700F5C22B = {
+						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = 287EDDET2B;
+					};
+					047170D81A72631700F5C22B = {
+						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 0444681C1A5DD75100B22106;
 					};
 					04DF35AC1A722C9000C78C70 = {
@@ -424,9 +546,10 @@
 			projectRoot = "";
 			targets = (
 				0444681C1A5DD75100B22106 /* WWDC Parties */,
-				044468331A5DD75100B22106 /* WWDC PartiesTests */,
 				04DF35AC1A722C9000C78C70 /* WWDC Parties WatchKit Extension */,
 				04DF35BB1A722C9000C78C70 /* WWDC Parties WatchKit App */,
+				047170CE1A72631700F5C22B /* WWDCPartiesAPI */,
+				047170D81A72631700F5C22B /* WWDCPartiesAPITests */,
 			);
 		};
 /* End PBXProject section */
@@ -442,7 +565,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044468321A5DD75100B22106 /* Resources */ = {
+		047170CD1A72631700F5C22B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047170D71A72631700F5C22B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -476,23 +606,30 @@
 			files = (
 				044468271A5DD75100B22106 /* PartyInfoViewController.swift in Sources */,
 				040ED13F1A5E09A80014413E /* PartyListCell.swift in Sources */,
-				047170C91A72603A00F5C22B /* WWDCPartiesAPI.swift in Sources */,
 				044468251A5DD75100B22106 /* PartyListViewController.swift in Sources */,
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
-				044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */,
-				044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */,
-				047170C61A725F0500F5C22B /* MMWormhole.m in Sources */,
-				04AEF8771A5E1C7200135778 /* Party.swift in Sources */,
 				040ED13C1A5E06620014413E /* PartyListDataSource.swift in Sources */,
 				0471769A1A64C17B00B897F1 /* PartyInfoSharer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		044468301A5DD75100B22106 /* Sources */ = {
+		047170CA1A72631700F5C22B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0444683B1A5DD75100B22106 /* WWDC_PartiesTests.swift in Sources */,
+				047170F11A72637400F5C22B /* WWDCPartiesAPI.swift in Sources */,
+				047170F01A72637100F5C22B /* Party.swift in Sources */,
+				047170F21A7263A100F5C22B /* MMWormhole.m in Sources */,
+				047170F31A7263A600F5C22B /* SwiftyJSON.swift in Sources */,
+				047170EF1A72636C00F5C22B /* PartyHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		047170D51A72631700F5C22B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				047170E31A72631700F5C22B /* WWDCPartiesAPITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,10 +648,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		044468361A5DD75100B22106 /* PBXTargetDependency */ = {
+		047170DC1A72631700F5C22B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047170CE1A72631700F5C22B /* WWDCPartiesAPI */;
+			targetProxy = 047170DB1A72631700F5C22B /* PBXContainerItemProxy */;
+		};
+		047170DE1A72631700F5C22B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 0444681C1A5DD75100B22106 /* WWDC Parties */;
-			targetProxy = 044468351A5DD75100B22106 /* PBXContainerItemProxy */;
+			targetProxy = 047170DD1A72631700F5C22B /* PBXContainerItemProxy */;
+		};
+		047170E51A72631700F5C22B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 047170CE1A72631700F5C22B /* WWDCPartiesAPI */;
+			targetProxy = 047170E41A72631700F5C22B /* PBXContainerItemProxy */;
 		};
 		04DF35BF1A722C9000C78C70 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -648,7 +795,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "WWDC Parties/WWDC Parties-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -666,14 +813,62 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "WWDC Parties/WWDC Parties-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
-		044468421A5DD75100B22106 /* Debug */ = {
+		047170E91A72631800F5C22B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = WWDCPartiesAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		047170EA1A72631800F5C22B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = WWDCPartiesAPI/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		047170ED1A72631800F5C22B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -682,22 +877,24 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "WWDC PartiesTests/Info.plist";
+				INFOPLIST_FILE = WWDCPartiesAPITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Parties.app/WWDC Parties";
 			};
 			name = Debug;
 		};
-		044468431A5DD75100B22106 /* Release */ = {
+		047170EE1A72631800F5C22B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
+				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "WWDC PartiesTests/Info.plist";
+				INFOPLIST_FILE = WWDCPartiesAPITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WWDC Parties.app/WWDC Parties";
@@ -795,14 +992,21 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		044468411A5DD75100B22106 /* Build configuration list for PBXNativeTarget "WWDC PartiesTests" */ = {
+		047170E81A72631800F5C22B /* Build configuration list for PBXNativeTarget "WWDCPartiesAPI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				044468421A5DD75100B22106 /* Debug */,
-				044468431A5DD75100B22106 /* Release */,
+				047170E91A72631800F5C22B /* Debug */,
+				047170EA1A72631800F5C22B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+		};
+		047170EC1A72631800F5C22B /* Build configuration list for PBXNativeTarget "WWDCPartiesAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				047170ED1A72631800F5C22B /* Debug */,
+				047170EE1A72631800F5C22B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		04DF35CF1A722C9100C78C70 /* Build configuration list for PBXNativeTarget "WWDC Parties WatchKit App" */ = {
 			isa = XCConfigurationList;
