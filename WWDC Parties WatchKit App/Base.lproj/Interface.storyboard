@@ -12,7 +12,7 @@
                     <items>
                         <table alignment="left" id="Gkr-q8-DUI">
                             <items>
-                                <tableRow identifier="PartyTableRow" id="BMh-IY-ZKo">
+                                <tableRow identifier="PartyTableRow" id="BMh-IY-ZKo" customClass="PartyRow" customModule="WWDC_Parties_WatchKit_Extension">
                                     <group key="rootItem" width="1" height="0.0" alignment="left" id="T4D-p5-hPM">
                                         <items>
                                             <label alignment="left" text="Introducing Mapbox GL" textAlignment="left" lineHeight="1" numberOfLines="2" id="vro-C1-DP9">
@@ -23,6 +23,9 @@
                                             <segue destination="piB-97-w5K" kind="push" id="fka-ej-Mfm"/>
                                         </connections>
                                     </group>
+                                    <connections>
+                                        <outlet property="partyNameLabel" destination="vro-C1-DP9" id="duk-lt-rzI"/>
+                                    </connections>
                                 </tableRow>
                             </items>
                         </table>

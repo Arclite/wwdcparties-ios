@@ -12,5 +12,11 @@ class InterfaceController: WKInterfaceController {
 	override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
 		favoritesTable.setNumberOfRows(1, withRowType: PartyTableRowType)
+		
+		for i in 0..<favoritesTable.numberOfRows {
+			if let row = favoritesTable.rowControllerAtIndex(i) as? PartyRow {
+				row.partyNameLabel.setText("Introducing Mapbox GL")
+			}
+		}
     }
 }
