@@ -18,6 +18,7 @@
 		0444683B1A5DD75100B22106 /* WWDC_PartiesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */; };
 		044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468441A5DE1EF00B22106 /* PartyHandler.swift */; };
 		044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 044468481A5DEF9000B22106 /* SwiftyJSON.swift */; };
+		047170C61A725F0500F5C22B /* MMWormhole.m in Sources */ = {isa = PBXBuildFile; fileRef = 047170C51A725F0500F5C22B /* MMWormhole.m */; };
 		0471769A1A64C17B00B897F1 /* PartyInfoSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047176991A64C17B00B897F1 /* PartyInfoSharer.swift */; };
 		04AEF8771A5E1C7200135778 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AEF8761A5E1C7200135778 /* Party.swift */; };
 		04DF35B31A722C9000C78C70 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DF35B21A722C9000C78C70 /* InterfaceController.swift */; };
@@ -86,6 +87,10 @@
 		0444683A1A5DD75100B22106 /* WWDC_PartiesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDC_PartiesTests.swift; sourceTree = "<group>"; };
 		044468441A5DE1EF00B22106 /* PartyHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyHandler.swift; sourceTree = "<group>"; };
 		044468481A5DEF9000B22106 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		047170C31A725F0500F5C22B /* WWDC Parties-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WWDC Parties-Bridging-Header.h"; sourceTree = "<group>"; };
+		047170C41A725F0500F5C22B /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
+		047170C51A725F0500F5C22B /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
+		047170C71A725FB100F5C22B /* WWDC Parties WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Parties WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		047176991A64C17B00B897F1 /* PartyInfoSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyInfoSharer.swift; sourceTree = "<group>"; };
 		04AEF8761A5E1C7200135778 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		04DF35AD1A722C9000C78C70 /* WWDC Parties WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "WWDC Parties WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,10 +202,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		047170C21A725EF100F5C22B /* Third Party */ = {
+			isa = PBXGroup;
+			children = (
+				047170C41A725F0500F5C22B /* MMWormhole.h */,
+				047170C51A725F0500F5C22B /* MMWormhole.m */,
+				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
+				047170C31A725F0500F5C22B /* WWDC Parties-Bridging-Header.h */,
+			);
+			name = "Third Party";
+			sourceTree = "<group>";
+		};
 		04AEF8781A5E204F00135778 /* Data Handling */ = {
 			isa = PBXGroup;
 			children = (
-				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
 				044468441A5DE1EF00B22106 /* PartyHandler.swift */,
 				04AEF8761A5E1C7200135778 /* Party.swift */,
 			);
@@ -229,6 +244,7 @@
 		04AEF87B1A5E207A00135778 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				047170C21A725EF100F5C22B /* Third Party */,
 				044468221A5DD75100B22106 /* AppDelegate.swift */,
 				04AEF8781A5E204F00135778 /* Data Handling */,
 				040ED13D1A5E09860014413E /* Party List */,
@@ -240,6 +256,7 @@
 		04DF35AE1A722C9000C78C70 /* WWDC Parties WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				047170C71A725FB100F5C22B /* WWDC Parties WatchKit Extension.entitlements */,
 				04DF35B21A722C9000C78C70 /* InterfaceController.swift */,
 				04DF35B41A722C9000C78C70 /* NotificationController.swift */,
 				04DF35B61A722C9000C78C70 /* GlanceController.swift */,
@@ -364,6 +381,9 @@
 						CreatedOnToolsVersion = 6.1;
 						DevelopmentTeam = 287EDDET2B;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
 							com.apple.SafariKeychain = {
 								enabled = 1;
 							};
@@ -376,6 +396,11 @@
 					04DF35AC1A722C9000C78C70 = {
 						CreatedOnToolsVersion = 6.2;
 						DevelopmentTeam = 287EDDET2B;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					04DF35BB1A722C9000C78C70 = {
 						CreatedOnToolsVersion = 6.2;
@@ -452,6 +477,7 @@
 				044468231A5DD75100B22106 /* AppDelegate.swift in Sources */,
 				044468491A5DEF9000B22106 /* SwiftyJSON.swift in Sources */,
 				044468451A5DE1EF00B22106 /* PartyHandler.swift in Sources */,
+				047170C61A725F0500F5C22B /* MMWormhole.m in Sources */,
 				04AEF8771A5E1C7200135778 /* Party.swift in Sources */,
 				040ED13C1A5E06620014413E /* PartyListDataSource.swift in Sources */,
 				0471769A1A64C17B00B897F1 /* PartyInfoSharer.swift in Sources */,
@@ -609,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "WWDC Parties/WWDC Parties.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -617,6 +644,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WWDC Parties/WWDC Parties-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -624,6 +653,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "WWDC Parties/WWDC Parties.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -632,6 +662,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WWDC Parties/WWDC Parties-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -672,6 +703,7 @@
 		04DF35CB1A722C9100C78C70 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WWDC Parties WatchKit Extension/WWDC Parties WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -682,6 +714,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -689,6 +722,7 @@
 		04DF35CC1A722C9100C78C70 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "WWDC Parties WatchKit Extension/WWDC Parties WatchKit Extension.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -696,6 +730,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -772,6 +807,7 @@
 				04DF35CE1A722C9100C78C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		04DF35D01A722C9100C78C70 /* Build configuration list for PBXNativeTarget "WWDC Parties WatchKit Extension" */ = {
 			isa = XCConfigurationList;
@@ -780,6 +816,7 @@
 				04DF35CC1A722C9100C78C70 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
