@@ -120,7 +120,7 @@
 		047170C41A725F0500F5C22B /* MMWormhole.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMWormhole.h; sourceTree = "<group>"; };
 		047170C51A725F0500F5C22B /* MMWormhole.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMWormhole.m; sourceTree = "<group>"; };
 		047170C71A725FB100F5C22B /* WWDC Parties WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Parties WatchKit Extension.entitlements"; sourceTree = "<group>"; };
-		047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WWDCPartiesAPI.swift; path = "../WWDC Parties/WWDCPartiesAPI.swift"; sourceTree = "<group>"; };
+		047170C81A72603A00F5C22B /* WWDCPartiesAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WWDCPartiesAPI.swift; sourceTree = "<group>"; };
 		047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WWDCPartiesAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		047170D21A72631700F5C22B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		047170D31A72631700F5C22B /* WWDCPartiesAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WWDCPartiesAPI.h; sourceTree = "<group>"; };
@@ -257,8 +257,7 @@
 				047170C51A725F0500F5C22B /* MMWormhole.m */,
 				044468481A5DEF9000B22106 /* SwiftyJSON.swift */,
 			);
-			name = "Third Party";
-			path = "../WWDC Parties";
+			path = "Third Party";
 			sourceTree = "<group>";
 		};
 		047170D01A72631700F5C22B /* API */ = {
