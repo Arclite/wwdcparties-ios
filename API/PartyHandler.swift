@@ -7,7 +7,7 @@ public typealias PartyListCompletionHandler = ([Party], NSError!) -> Void
 
 public class PartyHandler {
 	class var request: NSURLRequest? {
-		if let partiesURL = NSURL(string: "/parties", relativeToURL: APIBaseURL) {
+		if let partiesURL = NSURL(string: "/parties/", relativeToURL: APIBaseURL) {
 			return NSURLRequest(URL: partiesURL)
 		} else {
 			return nil
