@@ -27,6 +27,11 @@
 		047170F41A72646D00F5C22B /* MMWormhole.h in Headers */ = {isa = PBXBuildFile; fileRef = 047170C41A725F0500F5C22B /* MMWormhole.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0471769A1A64C17B00B897F1 /* PartyInfoSharer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047176991A64C17B00B897F1 /* PartyInfoSharer.swift */; };
 		047903A91A784204008C3213 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047903A81A784204008C3213 /* Party.swift */; };
+		04DAB45C1A9C144600A8297B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAB45B1A9C144600A8297B /* AppDelegate.swift */; };
+		04DAB45E1A9C144600A8297B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04DAB45D1A9C144600A8297B /* ViewController.swift */; };
+		04DAB4611A9C144600A8297B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04DAB45F1A9C144600A8297B /* Main.storyboard */; };
+		04DAB4631A9C144600A8297B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04DAB4621A9C144600A8297B /* Images.xcassets */; };
+		04DAB4661A9C144600A8297B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04DAB4641A9C144600A8297B /* LaunchScreen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +108,13 @@
 		047170E21A72631700F5C22B /* WWDCPartiesAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WWDCPartiesAPITests.swift; sourceTree = "<group>"; };
 		047176991A64C17B00B897F1 /* PartyInfoSharer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyInfoSharer.swift; sourceTree = "<group>"; };
 		047903A81A784204008C3213 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
+		04DAB4571A9C144600A8297B /* Design.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Design.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04DAB45A1A9C144600A8297B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04DAB45B1A9C144600A8297B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04DAB45D1A9C144600A8297B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04DAB4601A9C144600A8297B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04DAB4621A9C144600A8297B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		04DAB4651A9C144600A8297B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		04E00E961A60AC2E00EE9A99 /* WWDC Parties.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "WWDC Parties.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -130,6 +142,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04DAB4541A9C144600A8297B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -148,6 +167,7 @@
 			children = (
 				0444681F1A5DD75100B22106 /* WWDC Parties */,
 				047170D01A72631700F5C22B /* API */,
+				04DAB4581A9C144600A8297B /* Design */,
 				0444681E1A5DD75100B22106 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -158,6 +178,7 @@
 				0444681D1A5DD75100B22106 /* WWDC Parties.app */,
 				047170CF1A72631700F5C22B /* WWDCPartiesAPI.framework */,
 				047170D91A72631700F5C22B /* WWDCPartiesAPITests.xctest */,
+				04DAB4571A9C144600A8297B /* Design.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,6 +308,27 @@
 			name = Source;
 			sourceTree = "<group>";
 		};
+		04DAB4581A9C144600A8297B /* Design */ = {
+			isa = PBXGroup;
+			children = (
+				04DAB45B1A9C144600A8297B /* AppDelegate.swift */,
+				04DAB45D1A9C144600A8297B /* ViewController.swift */,
+				04DAB45F1A9C144600A8297B /* Main.storyboard */,
+				04DAB4621A9C144600A8297B /* Images.xcassets */,
+				04DAB4641A9C144600A8297B /* LaunchScreen.xib */,
+				04DAB4591A9C144600A8297B /* Supporting Files */,
+			);
+			path = Design;
+			sourceTree = "<group>";
+		};
+		04DAB4591A9C144600A8297B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04DAB45A1A9C144600A8297B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -359,6 +401,23 @@
 			productReference = 047170D91A72631700F5C22B /* WWDCPartiesAPITests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		04DAB4561A9C144600A8297B /* Design */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04DAB4771A9C144600A8297B /* Build configuration list for PBXNativeTarget "Design" */;
+			buildPhases = (
+				04DAB4531A9C144600A8297B /* Sources */,
+				04DAB4541A9C144600A8297B /* Frameworks */,
+				04DAB4551A9C144600A8297B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Design;
+			productName = Design;
+			productReference = 04DAB4571A9C144600A8297B /* Design.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -388,6 +447,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 0444681C1A5DD75100B22106;
 					};
+					04DAB4561A9C144600A8297B = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 044468181A5DD75100B22106 /* Build configuration list for PBXProject "WWDC Parties" */;
@@ -406,6 +468,7 @@
 				0444681C1A5DD75100B22106 /* WWDC Parties */,
 				047170CE1A72631700F5C22B /* WWDCPartiesAPI */,
 				047170D81A72631700F5C22B /* WWDCPartiesAPITests */,
+				04DAB4561A9C144600A8297B /* Design */,
 			);
 		};
 /* End PBXProject section */
@@ -432,6 +495,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04DAB4551A9C144600A8297B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAB4611A9C144600A8297B /* Main.storyboard in Resources */,
+				04DAB4661A9C144600A8297B /* LaunchScreen.xib in Resources */,
+				04DAB4631A9C144600A8297B /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +544,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		04DAB4531A9C144600A8297B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04DAB45E1A9C144600A8297B /* ViewController.swift in Sources */,
+				04DAB45C1A9C144600A8297B /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -504,6 +586,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				0444682E1A5DD75100B22106 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		04DAB45F1A9C144600A8297B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04DAB4601A9C144600A8297B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04DAB4641A9C144600A8297B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04DAB4651A9C144600A8297B /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -709,6 +807,30 @@
 			};
 			name = Release;
 		};
+		04DAB4731A9C144600A8297B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Design/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		04DAB4741A9C144600A8297B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Design/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -747,6 +869,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		04DAB4771A9C144600A8297B /* Build configuration list for PBXNativeTarget "Design" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04DAB4731A9C144600A8297B /* Debug */,
+				04DAB4741A9C144600A8297B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
