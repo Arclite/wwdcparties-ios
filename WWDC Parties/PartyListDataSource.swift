@@ -28,12 +28,12 @@ class PartyListDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let partyCell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as PartyListCell
+		let partyCell = tableView.dequeueReusableCellWithIdentifier(PartyListCellIdentifier, forIndexPath: indexPath) as! PartyListCell
 		partyCell.party = partyForIndexPath(indexPath)
 		return partyCell
 	}
 	
-	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String {
+	func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
 		return PartyListDataSource.dateFormatter.stringFromDate(days()[section])
 	}
 	
