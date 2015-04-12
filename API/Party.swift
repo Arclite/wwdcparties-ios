@@ -22,7 +22,7 @@ public struct Party: Printable {
 		}
 	}
 	public var listingDay: NSDate {
-		let components = NSCalendar.currentCalendar().components((.YearCalendarUnit | .MonthCalendarUnit | .DayCalendarUnit), fromDate: startDate)
+		let components = NSCalendar.currentCalendar().components((.CalendarUnitYear | .CalendarUnitMonth | .CalendarUnitDay), fromDate: startDate)
 		if let listingDay = NSCalendar.currentCalendar().dateFromComponents(components) {
 			return listingDay
 		} else {
