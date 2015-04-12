@@ -36,8 +36,8 @@ class PartyInfoViewController: UIViewController {
 	}
 	
 	@IBAction func showShare() {
-		if let party = party {
-			let activityViewController = UIActivityViewController(activityItems: [party.name, party.shareURL], applicationActivities:nil)
+		if let party = party, shareURL = party.shareURL {
+			let activityViewController = UIActivityViewController(activityItems:[party.name, shareURL], applicationActivities:nil)
 			activityViewController.popoverPresentationController?.barButtonItem = shareBarButtonItem
 			self.presentViewController(activityViewController, animated: true, completion: nil)
 		}

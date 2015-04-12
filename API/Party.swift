@@ -14,7 +14,7 @@ public struct Party: Printable {
 	public var startDate: NSDate { return NSDate(timeIntervalSince1970: startTimeInterval) }
 	public var endDate: NSDate { return NSDate(timeIntervalSince1970: endTimeInterval) }
 	public var sponsorURL: NSURL? { return NSURL(string: sponsorURLString) }
-	public var shareURL: NSURL {
+	public var shareURL: NSURL? {
 		if let partyURL = NSURL(string: "/parties/\(slug)", relativeToURL: APIBaseURL) {
 			return partyURL
 		} else {
